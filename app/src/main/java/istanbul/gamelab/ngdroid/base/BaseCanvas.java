@@ -55,4 +55,16 @@ public abstract class BaseCanvas {
     public int getHeightHalf() {
         return root.appManager.getScreenHeightHalf();
     }
+    public int proportionWidth(int value) {
+        return (int) (value * getWidth()/1920.0f);
+    }
+    public float proportionWidth(float value) {
+        return value * getWidth()/1920;
+    }
+    public int proportionHeight(int value) {
+        return (int) (value * getHeight()/1080.0f);
+    }
+    public float proportionHeight(float value) {
+        return value * getHeight()/1080;
+    }
 }

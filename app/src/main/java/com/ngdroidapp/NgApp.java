@@ -9,8 +9,8 @@ import istanbul.gamelab.ngdroid.util.Log;
 
 
 /**
- * Created by noyan on 24.06.2016.
- * Nitra Games Ltd.
+ * Created by A. Melik ERSOY on 07.09.2018.
+ *
  */
 
 public class NgApp extends BaseApp {
@@ -21,9 +21,6 @@ public class NgApp extends BaseApp {
 
 
     public void setup() {
-        appManager.setUnitResolution(AppManager.RESOLUTION_QHD);
-        appManager.setFrameRateTarget(20);
-
         MenuCanvas mc = new MenuCanvas(this);
         canvasManager.setCurrentCanvas(mc);
     }

@@ -97,7 +97,7 @@ public class GUI {
         guifont[FONT_7].setFontAlignmentHorizontal(GUI_Font.ALIGNHOR_CENTER);
         guifont[FONT_7].setFontAlignmentVertical(GUI_Font.ALIGNHOR_CENTER);
         guifont[FONT_7].setFontColor(GUI_Font.FONTCOLOR_BLUE);
-        guifont[FONT_2].setFontColorOutline(GUI_Font.FONTCOLOR_BLACK);
+        guifont[FONT_7].setFontColorOutline(GUI_Font.FONTCOLOR_BLACK);
     }
 
     public NgApp getNgApp() {

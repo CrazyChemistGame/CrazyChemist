@@ -6,12 +6,13 @@ import istanbul.gamelab.ngdroid.base.BaseCanvas;
 import istanbul.gamelab.ngdroid.util.Log;
 
 /**
- * Created by noyan on 27.06.2016.
- * Nitra Games Ltd.
+ * Created by A. Melik ERSOY on 07.09.2018.
+ *
  */
 
 public class MenuCanvas extends BaseCanvas {
 
+    public int melik;
 
     public MenuCanvas(NgApp ngApp) {
         super(ngApp);

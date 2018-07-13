@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 
+import com.google.firebase.database.DatabaseReference;
+
 import istanbul.gamelab.ngdroid.base.BaseCanvas;
 import istanbul.gamelab.ngdroid.util.Log;
 import istanbul.gamelab.ngdroid.util.Utils;
@@ -17,7 +19,6 @@ import istanbul.gamelab.ngdroid.util.VirtualJoystick;
 
 
 public class GameCanvas extends BaseCanvas {
-
     private Bitmap backgraund;
     private Rect backgraundSrc, backgraundDst;
     private int backgraundSrcX, backgraundSrcY, backgraundSrcW, backgraundSrcH, backgraundDstX, backgraundDstY, backgraundDstW, backgraundDstH;

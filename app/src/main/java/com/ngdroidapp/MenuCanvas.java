@@ -12,13 +12,12 @@ import istanbul.gamelab.ngdroid.util.Log;
 
 public class MenuCanvas extends BaseCanvas {
 
-    public int melik;
-
     public MenuCanvas(NgApp ngApp) {
         super(ngApp);
     }
 
     public void setup() {
+        android.util.Log.i("MenuCanvas", "setup: ");
     }
 
     public void update() {

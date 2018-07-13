@@ -2,10 +2,12 @@ package com.ngdroidapp;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Rect;
 
 import istanbul.gamelab.ngdroid.base.BaseCanvas;
 import istanbul.gamelab.ngdroid.util.Log;
 import istanbul.gamelab.ngdroid.util.Utils;
+import istanbul.gamelab.ngdroid.util.VirtualJoystick;
 
 
 /**
@@ -16,10 +18,12 @@ import istanbul.gamelab.ngdroid.util.Utils;
 
 public class GameCanvas extends BaseCanvas {
 
-    private Bitmap logo;
-    private int logox, logoy, logow, logoh;
+    private Bitmap backgraund;
+    private Rect backgraundSrc, backgraundDst;
+    private int backgraundSrcX, backgraundSrcY, backgraundSrcW, backgraundSrcH, backgraundDstX, backgraundDstY, backgraundDstW, backgraundDstH;
     private int firstElement, secondElement, thirdElement, fourthElement, fifthElement; //Array Element Sequence
     private int[][] touchDownPoint, touchUpPoint, touchMovePoint; //Touch Activites Points and Id
+    private VirtualJoystick virtualJoystick;
 
     public GameCanvas(NgApp ngApp) {
         super(ngApp);
@@ -33,10 +37,9 @@ public class GameCanvas extends BaseCanvas {
     }
 
     public void draw(Canvas canvas) {
-        logox = (getWidth() - logow);
-        logoy = (getHeight() - logoh);
-
-        canvas.drawBitmap(logo, logox, logoy, null);
+        canvas.drawBitmap(backgraund, backgraundSrc, backgraundDst, null);
+        virtualJoystick.drawJoystick(root, canvas, "Right");
+        virtualJoystick.drawJoystick(root, canvas, "Left");
         root.gui.drawText(canvas, "FPS: " + root.appManager.getFrameRate() + " / " + root.appManager.getFrameRateTarget(), getWidth()/10, getHeight()/15, 0);
     }
 
@@ -45,10 +48,23 @@ public class GameCanvas extends BaseCanvas {
      *
      */
     public void initializeVariables() {
-        logo = Utils.loadImage(root,"background2.png");
-        logow = proportionWidth(logo.getWidth());
-        logoh = proportionWidth(logo.getHeight());
+        backgraund = Utils.loadImage(root,"background.png");
+        backgraundSrcW = backgraund.getWidth();
+        backgraundSrcH = backgraund.getHeight();
+        backgraundSrcX = 0;
+        backgraundSrcY = 0;
+        backgraundDstW = root.proportionWidth(backgraundSrcW);
+        backgraundDstH = root.proportionHeight(backgraundSrcH);
+        backgraundDstX = 0;
+        backgraundDstY = 0;
 
+        backgraundSrc = new Rect();
+        backgraundDst = new Rect();
+
+        backgraundSrc.set(backgraundSrcX, backgraundSrcY, backgraundSrcW, backgraundSrcH);
+        backgraundDst.set(backgraundDstX, backgraundDstY, backgraundDstX + backgraundDstW, backgraundDstY + backgraundDstH);
+
+        virtualJoystick = new VirtualJoystick();
 
         touchDownPoint = new int[3][2];
         touchUpPoint = new int[3][2];

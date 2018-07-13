@@ -23,6 +23,7 @@ public class NgApp extends BaseApp {
     public void setup() {
         MenuCanvas mc = new MenuCanvas(this);
         canvasManager.setCurrentCanvas(mc);
+        android.util.Log.i("NgApp", "setup: ");
     }
 
 

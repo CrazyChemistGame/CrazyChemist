@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "385245485129",
+    "firebase_url": "https://crazychemist-83c74.firebaseio.com",
+    "project_id": "crazychemist-83c74",
+    "storage_bucket": "crazychemist-83c74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385245485129:android:2a9fb497e82de92d",
+        "android_client_info": {
+          "package_name": "com.mycompany.myngdroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385245485129-42tloaghohicaaqe60dh6152ihe1kpa0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.myngdroidapp",
+            "certificate_hash": "2887748cbf540acc57dd6921e6223ffec0a36d82"
+          }
+        },
+        {
+          "client_id": "385245485129-kv9qr8d99659dmb9fvqdqdt1idlh0q6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCItwge0qgFTDRcoeebGzLjoB0MMBXNkLI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385245485129-kv9qr8d99659dmb9fvqdqdt1idlh0q6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

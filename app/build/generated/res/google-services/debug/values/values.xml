@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">385245485129-kv9qr8d99659dmb9fvqdqdt1idlh0q6j.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://crazychemist-83c74.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">385245485129</string>
+    <string name="google_api_key" translatable="false">AIzaSyCItwge0qgFTDRcoeebGzLjoB0MMBXNkLI</string>
+    <string name="google_app_id" translatable="false">1:385245485129:android:2a9fb497e82de92d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCItwge0qgFTDRcoeebGzLjoB0MMBXNkLI</string>
+    <string name="google_storage_bucket" translatable="false">crazychemist-83c74.appspot.com</string>
+    <string name="project_id" translatable="false">crazychemist-83c74</string>
+</resources>

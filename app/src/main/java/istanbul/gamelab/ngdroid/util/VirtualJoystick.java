@@ -25,8 +25,12 @@ public class VirtualJoystick{
     private int allSrcX, allSrcY, allSrcW, allSrcH, allDstX, allDstY, allDstW, allDstH;
     private boolean rightCheck = false, leftCheck = false, upCheck = false, downCheck = false, allCheck = false;
 
-    public void move(int iX, int vX){
+    public void move(int vX, int[][] touchPoint){
+        for (int i = 0; i >= touchPoint.length; i++) {
+            if (touchPoint[i][0] > 1) {
 
+            }
+        }
     }
 
     public void drawJoystick(NgApp root, Canvas canvas, String direction) {
